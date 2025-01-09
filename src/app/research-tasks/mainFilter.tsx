@@ -17,7 +17,7 @@ const MainFilter: React.FC<MainFilterProps> = ({ filter, handleUpdateFilter }) =
           filter?.main === "specific"
             ? "border-emerald-600 bg-emerald-600/10"
             : "border-gray-600 border-gray-600/40"
-        } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+        } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
       >
         <span className="text-2xl font-bold pb-2">Specific Influencer</span>
         <span className="text-lg text-white/50">
@@ -30,7 +30,7 @@ const MainFilter: React.FC<MainFilterProps> = ({ filter, handleUpdateFilter }) =
           filter?.main === "discover"
             ? "border-emerald-600 bg-emerald-600/10"
             : "border-gray-600 border-gray-600/40"
-        } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+        } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
       >
         <span className="text-2xl font-bold pb-2">Discover New</span>
         <span className="text-lg text-white/50">

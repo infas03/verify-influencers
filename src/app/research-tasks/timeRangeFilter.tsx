@@ -13,7 +13,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
   handleUpdateFilter,
 }) => {
   return (
-    <div className="lg:w-1/2 w-full">
+    <div className="w-full">
       <div className="mb-2 font-bold text-lg text-white/60">Time Range</div>
       <div className="flex flex-col gap-2">
         <div className="flex flex-col lg:flex-row gap-2">
@@ -22,8 +22,8 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
             className={`border-2 ${
               filter?.timeRange === "lastWeek"
                 ? "border-emerald-600 bg-emerald-600/10 text-emerald-600 font-bold"
-                : "border-gray-600 border-gray-600/40 text-white/60"
-            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+                : "border-gray-600/40 text-white/60"
+            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
           >
             Last Week
           </button>
@@ -33,7 +33,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
               filter?.timeRange === "lastMonth"
                 ? "border-emerald-600 bg-emerald-600/10 text-emerald-600 font-bold"
                 : "border-gray-600 border-gray-600/40 text-white/60"
-            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
           >
             Last Month
           </button>
@@ -46,7 +46,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
               filter?.timeRange === "lastYear"
                 ? "border-emerald-600 bg-emerald-600/10 text-emerald-600 font-bold"
                 : "border-gray-600 border-gray-600/40 text-white/60"
-            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
           >
             Last Year
           </button>
@@ -56,7 +56,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
               filter?.timeRange === "allTime"
                 ? "border-emerald-600 bg-emerald-600/10 text-emerald-600 font-bold"
                 : "border-gray-600 border-gray-600/40 text-white/60"
-            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl`}
+            } text-center p-5 w-full md:w-1/2 flex flex-col items-center justify-center rounded-xl hover:border-emerald-600`}
           >
             All Time
           </button>
