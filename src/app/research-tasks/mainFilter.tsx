@@ -12,6 +12,7 @@ const MainFilter: React.FC<MainFilterProps> = ({ filter, handleUpdateFilter }) =
   return (
     <div className="flex flex-col md:flex-row gap-4">
       <button
+        type='button'
         onClick={() => handleUpdateFilter("main", "specific")}
         className={`border-2 ${
           filter?.main === "specific"
@@ -25,6 +26,7 @@ const MainFilter: React.FC<MainFilterProps> = ({ filter, handleUpdateFilter }) =
         </span>
       </button>
       <button
+        type='button'
         onClick={() => handleUpdateFilter("main", "discover")}
         className={`border-2 ${
           filter?.main === "discover"

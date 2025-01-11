@@ -18,6 +18,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
       <div className="flex flex-col gap-2">
         <div className="flex flex-col lg:flex-row gap-2">
           <button
+            type='button'
             onClick={() => handleUpdateFilter("timeRange", "lastWeek")}
             className={`border-2 ${
               filter?.timeRange === "lastWeek"
@@ -28,6 +29,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
             Last Week
           </button>
           <button
+            type='button'
             onClick={() => handleUpdateFilter("timeRange", "lastMonth")}
             className={`border-2 ${
               filter?.timeRange === "lastMonth"
@@ -41,6 +43,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
 
         <div className="flex flex-col lg:flex-row gap-2">
           <button
+            type='button'
             onClick={() => handleUpdateFilter("timeRange", "lastYear")}
             className={`border-2 ${
               filter?.timeRange === "lastYear"
@@ -51,6 +54,7 @@ const TimeRangeFilter: React.FC<TimeRangeFilterProps> = ({
             Last Year
           </button>
           <button
+            type='button'
             onClick={() => handleUpdateFilter("timeRange", "allTime")}
             className={`border-2 ${
               filter?.timeRange === "allTime"

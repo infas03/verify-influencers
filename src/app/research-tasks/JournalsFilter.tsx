@@ -1,5 +1,5 @@
 import { FilterState } from "@/types/filter";
-import { journals } from "../constants/dropdownValues";
+import { journals } from "../../constants/dropdownValues";
 
 type JournalsFilterProps = {
   filter: FilterState;
