@@ -1,7 +1,7 @@
 import axios from "axios";
 import { FilterState } from "@/types/filter";
 
-export const fetchTweets = async (filters: FilterState) => {
+export const fetchTweets = async (filters: FilterState, router) => {
   const queryParts: string[] = [];
 
   if (filters.main === "specific") {
@@ -39,8 +39,10 @@ export const fetchTweets = async (filters: FilterState) => {
 
   try {
     const response = await axios.get("/api/tweets", { params });
+    router.push("/leaderboard")
     return response.data;
   } catch (error) {
+    router.push("/leaderboard") //juz for now I put here.
     console.error("Error fetching tweets:", error);
     return null;
   }

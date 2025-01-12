@@ -1,6 +1,8 @@
 import Image from "next/image";
 import defaultPic from "../../assets/image/Default_profilepic.png";
 import { Influencer } from "@/types/leaderboard";
+import { getTrendIcon } from "@/components/Functions";
+import Link from "next/link";
 
 type InfluencerListProps = {
   currentEntries: Influencer[];
@@ -24,10 +26,19 @@ const InfluencerList: React.FC<InfluencerListProps> = ({ currentEntries }) => {
         <tbody>
           {currentEntries?.map((item, index) => {
             return (
-              <tr className={`h-20 text-sm bg-gray-600/10 border-b-2 border-gray-600/40`} key={index}>
-                <td className="h-20 text-center">#{item?.rank}</td>
+              <tr
+                className={`h-20 text-sm bg-gray-600/10 border-b-2 border-gray-600/40`}
+                key={index}
+              >
+                <td className="h-20 w-28 text-center">
+                  <Link href={`/influencer/${item?.id}`}>
+                    <div className="hover:underline">
+                      #{item?.rank}
+                    </div>
+                  </Link>
+                </td>
                 <td>
-                  <div className="flex justify-center items-center gap-x-3">
+                  <div className="flex justify-start items-center gap-x-3">
                     <Image
                       src={defaultPic}
                       alt="profile pic"
@@ -36,9 +47,13 @@ const InfluencerList: React.FC<InfluencerListProps> = ({ currentEntries }) => {
                     {item?.name}
                   </div>
                 </td>
-                <td className="h-20 text-center">{item?.category}</td>
+                <td className="h-20 text-center capitalize">{item?.category?.[0]}</td>
                 <td className="h-20 text-center">{item?.score}%</td>
-                <td className="h-20 text-center">{item?.trend}</td>
+                <td className="h-20 text-center">
+                  <div className="flex items-center justify-center">
+                    {getTrendIcon(item?.trend)}
+                  </div>
+                </td>
                 <td className="h-20 text-center">{item?.followers}</td>
                 <td className="h-20 text-center">{item?.verifiedClaims}</td>
               </tr>

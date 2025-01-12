@@ -3,19 +3,20 @@
 import Layout from "@/layout/layout";
 import LeaderboardHeader from "./LeaderboardHeader";
 import InfluencerList from "./InfluencerList";
+import { dummyInfluencers } from "@/utils/dummyData";
 
 const Leaderboard = () => {
-  const dummyData = [
-    {
-      rank: 1,
-      name: "Dr. Peter Attia",
-      category: "Medicine",
-      score: 94,
-      trend: "up",
-      followers: 120000,
-      verifiedClaims: 200,
-    },
-  ];
+  // const dummyData = [
+  //   {
+  //     rank: 1,
+  //     name: "Dr. Peter Attia",
+  //     category: "Medicine",
+  //     score: 94,
+  //     trend: "up",
+  //     followers: 120000,
+  //     verifiedClaims: 200,
+  //   },
+  // ];
   return (
     <Layout>
       <div className="flex flex-col h-full w-full rounded-xl gap-y-8">
@@ -33,7 +34,7 @@ const Leaderboard = () => {
           <LeaderboardHeader />
         </div>
         <div>
-          <InfluencerList currentEntries={dummyData} />
+          <InfluencerList currentEntries={dummyInfluencers} />
         </div>
       </div>
     </Layout>

@@ -12,8 +12,11 @@ import SecondaryFilter from "./SecondaryFilter";
 import JournalsFilter from "./JournalsFilter";
 import NoteFilter from "./NoteFilter";
 import { fetchTweets } from "@/apis/twitter";
+import { useRouter } from "next/navigation";
 
 const ResearchTask = () => {
+  const router = useRouter();
+
   const [filter, setFilter] = useState<FilterState>({
     main: "specific",
     timeRange: "lastMonth",
@@ -50,7 +53,7 @@ const ResearchTask = () => {
       console.log("Submitting values: ", values);
 
       try {
-        const tweets = await fetchTweets(values);
+        const tweets = await fetchTweets(values, router);
         console.log("Fetched Tweets:", tweets);
 
       } catch (error) {
@@ -58,9 +61,6 @@ const ResearchTask = () => {
       }
     },
   });
-
-  // console.log("filter: ", filter);
-  // console.log("formik.values: ", formik.values);
 
   return (
     <Layout>
