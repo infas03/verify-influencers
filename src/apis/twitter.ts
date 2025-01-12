@@ -1,7 +1,8 @@
 import axios from "axios";
 import { FilterState } from "@/types/filter";
+import { useRouter } from "next/navigation";
 
-export const fetchTweets = async (filters: FilterState, router) => {
+export const fetchTweets = async (filters: FilterState, router: ReturnType<typeof useRouter>) => {
   const queryParts: string[] = [];
 
   if (filters.main === "specific") {
