@@ -49,8 +49,13 @@ const ResearchTask = () => {
     onSubmit: async (values) => {
       console.log("Submitting values: ", values);
 
-      const tweets = await fetchTweets(values);
-      console.log("Fetched Tweets:", tweets);
+      try {
+        const tweets = await fetchTweets(values);
+        console.log("Fetched Tweets:", tweets);
+
+      } catch (error) {
+        console.error("Error fetching tweets:", error);
+      }
     },
   });
 

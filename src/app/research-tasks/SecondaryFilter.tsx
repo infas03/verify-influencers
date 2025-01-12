@@ -36,7 +36,7 @@ const SecondaryFilter: React.FC<SecondaryFilterProps> = ({
         Set to 0 to skip product research
       </span>
       <div className="flex justify-between items-start mt-6">
-        <div className="w-96 flex flex-col">
+        <div className="lg:w-96 flex flex-col">
           <span className="text-white/80 font-medium">
             Include Revenue Analysis
           </span>
@@ -50,7 +50,7 @@ const SecondaryFilter: React.FC<SecondaryFilterProps> = ({
         />
       </div>
       <div className="flex justify-between items-start mt-6">
-        <div className="w-96 flex flex-col">
+        <div className="lg:w-96 flex flex-col">
           <span className="text-white/80 font-medium">
             Verify with Scientific Journals
           </span>

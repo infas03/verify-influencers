@@ -1,9 +1,14 @@
 export type Influencer = {
+  id: string;
   rank: number;
   name: string;
-  category: string;
   score: number;
-  trend: string;
+  trend: "up" | "down" | "neutral";
   followers: number;
   verifiedClaims: number;
+  avatar: string;
+  category: string[];
+  verificationStatus: "Verified" | "Questionable" | "Debunked";
+  yearlyRevenue: number;
+  bio: string;
 };
